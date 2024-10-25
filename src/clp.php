@@ -347,7 +347,7 @@ class Clp
 	private function get_file_count($dir)
 	{
 		$file_count = 0;
-		$files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir));
+		$files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($dir));
 		foreach ($files as $file) {
 			if ($file->isFile()) {
 				$file_count++;
