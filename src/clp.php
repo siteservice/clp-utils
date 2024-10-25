@@ -130,9 +130,9 @@ class Clp
 
 		try {
 			shell_exec($fix_ownership_command);
-			WP_CLI::success("Ownership fixed");
+			WP_CLI::success("File ownership adjusted");
 		} catch (Exception $e) {
-			WP_CLI::error("Failed to fix ownership: " . $e->getMessage());
+			WP_CLI::error("Failed to adjust file ownership: " . $e->getMessage());
 		}
 
 		$folder_permissions_command = 'find ' . escapeshellarg($dest_config['path_folder']) . ' -type d -print0 | xargs -0 chmod ' . escapeshellarg($folders);
@@ -152,7 +152,7 @@ class Clp
 			WP_CLI::error("Failed to adjust file permissions: " . $e->getMessage());
 		}
 
-		$dump_database_message = WP_CLI::colorize("\n%YSTAGE 3:%n %CDumping Database from Staging Environment%n");
+		$dump_database_message = WP_CLI::colorize("\n%YSTAGE 3:%n %CDumping Database from Source Environment%n");
 		WP_CLI::log($dump_database_message);
 
 		$options = array(
