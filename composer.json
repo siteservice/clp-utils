@@ -1,0 +1,47 @@
+{
+  "name": "siteservice/clp-utils",
+  "type": "wp-cli-package",
+  "description": "Utility Functions for WP_CLI, specific to servers manged with CloudPanel.io",
+  "homepage": "https://github.com/siteservice/clp-utils",
+  "license": "MIT",
+  "keywords": [
+    "cloupanel",
+    "clp",
+    "wordpress",
+    "wp-cli",
+    "wp"
+  ],
+  "require": {
+    "wp-cli/wp-cli": "^2"
+  },
+  "require-dev": {
+    "wp-cli/scaffold-command": "^2",
+    "wp-cli/extension-command": "^2",
+    "wp-cli/entity-command": "^2",
+    "wp-cli/wp-cli-tests": "^4"
+  },
+  "autoload": {
+    "files": [
+      "clp-utils.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Site Service",
+      "email": "support@siteservice.net",
+      "homepage": "https://siteservice.net"
+    }
+  ],
+  "extra": {
+    "bundled": true,
+    "commands": [
+      "wp clp",
+      "wp clp copy"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
