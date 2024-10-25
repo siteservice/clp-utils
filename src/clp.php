@@ -34,7 +34,7 @@ class Clp
 	 * : Whether to copy uploads from the source environment to the destination environment.
 	 *
 	 * ## EXAMPLES
-	 * wp clp copy --src=production_user --dest=staging_user --files=660 --folders=770
+	 * wp clp-utils copy --src=production_user --dest=staging_user --files=660 --folders=770
 	 *
 	 *  @alias clp-utils
 	 */

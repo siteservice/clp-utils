@@ -54,7 +54,7 @@ wp clp-utils copy
 
 **EXAMPLES**
 
-`wp clp copy --src=production_user --dest=staging_user --files=660 --folders=770 --allow-root`
+`wp clp-utils copy --src=production_user --dest=staging_user --files=660 --folders=770 --allow-root`
 
 ## Installing
 
